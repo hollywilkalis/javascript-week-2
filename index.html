@@ -8,13 +8,24 @@
     <title>Doctor Lookup</title>
   </head>
   <body>
-    <div class="jumbotron">Find a doctor in Portland</div>
+    <div class="jumbotron"><h1>Portland Doctor Search</h1></div>
     <div class="container">
       <form id="nameSearch">
+        <h4>Search by doctor's name</h4>
         <input type="text" id="doctorName" value="nobody">
         <button type="submit">Search</button>
       </form>
+
+      <form id="keywordSearch">
+        <h4>Search for a doctor by medical issue</h4>
+        <input type="text" id="keyword" value="cancer">
+        <button type="submit">Search</button>
+      </form>
+
       <div id="doctorSearchResponse">
+        <div class="doctor"></div>
+      </div>
+      <div id="keywordSearchResponse">
         <div class="doctor"></div>
       </div>
     </div>
