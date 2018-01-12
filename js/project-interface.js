@@ -2,19 +2,28 @@ import { apiCallDoctor } from './../js/project.js';
 var apiKey = require('./../.env').apiKey;
 
 function addToPage(doctorInfo){
-  console.log(doctorInfo);
-  // for (var i = 0; i < bikeInfo.bikes.length; i++) {
-  //   console.log(i);
-  //   var convertDate = moment.unix(bikeInfo.bikes[i].date_stolen).calendar(); // or end in .format("MM-DD-YYYY HH:mm")
-  //   console.log(convertDate);
-  //   $('div').append(`<p class="bike-item">Bike Description: ${bikeInfo.bikes[i].title}<br>Serial Number: ${bikeInfo.bikes[i].serial}<br>Stolen From: ${bikeInfo.bikes[i].stolen_location}<br>Date Stolen: ${convertDate}</p>`);
-  // }
+  if (doctorInfo.meta.count === 0) {
+    alert("Sorry, no doctors met your search criteria. Please try your search again.");
+  } else {
+    for (var i = 0; i < doctorInfo.data.length; i++) {
+      console.log(i);
+      $('#doctorSearchResponse').append(`
+        <p class="listing">Name: ${doctorInfo.data[i].profile.first_name}  ${doctorInfo.data[i].profile.last_name}<br>
+          <a href="${doctorInfo.data[i].profile.image_url}" target="_blank">Website</a><br>Accepts new patients: ${doctorInfo.data[i].practices[0].accepts_new_patients}<br>
+          Address: ${doctorInfo.data[i].practices[0].visit_address.street}<br>
+          ${doctorInfo.data[i].practices[0].visit_address.city} OR ${doctorInfo.data[i].practices[0].visit_address.zip}<br>
+          Phone: ${doctorInfo.data[i].practices[0].phones[0].number}
+           </p>`);
+    }
+  }
 }
 
 $(document).ready(function(){
   $("form#nameSearch").submit(function(event) {
     event.preventDefault();
     let inputName = $("#doctorName").val();
-    apiCallDoctor(inputName, apiKey, addToPage);
+     apiCallDoctor(inputName, apiKey, addToPage);
+     // $("#doctorSearchResponse").text(result);
+     $("#nameSearch").reset(0);
   });
 });

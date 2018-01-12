@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Doctor Lookup</title>
@@ -10,10 +11,12 @@
     <div class="jumbotron">Find a doctor in Portland</div>
     <div class="container">
       <form id="nameSearch">
-        <input type="text" id="doctorName" value="steve">
+        <input type="text" id="doctorName" value="nobody">
         <button type="submit">Search</button>
       </form>
-
+      <div id="doctorSearchResponse">
+        <div class="doctor"></div>
+      </div>
     </div>
   </body>
 </html>

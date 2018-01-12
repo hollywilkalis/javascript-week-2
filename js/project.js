@@ -22,11 +22,6 @@ export function apiCallDoctor(inputName, apiKey, addToPage) {
 
   promise.then(function(response){
     let doctorInfo = JSON.parse(response);
-    if (doctorInfo.meta.count === 0) {
-      console.log("sorry, none found");
-    } else {
-      console.log(doctorInfo);
-    }
-    // addToPage(doctorInfo);
+    addToPage(doctorInfo);
   });
 }
