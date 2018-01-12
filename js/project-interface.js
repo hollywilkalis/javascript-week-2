@@ -40,15 +40,12 @@ $(document).ready(function(){
   $("form#nameSearch").submit(function(event) {
     event.preventDefault();
     let inputName = $("#doctorName").val();
-     apiCallDoctor(inputName, apiKey, addToPage);
-     // $("#doctorSearchResponse").text(result);
-     $("#nameSearch").reset(0);
+    apiCallDoctor(inputName, apiKey, addToPage);
   });
 
   $("form#keywordSearch").submit(function(event) {
     event.preventDefault();
     let inputKeyword = $("#keyword").val();
-     apiCallKeyword(inputKeyword, apiKey, addToPage);
-     // $("#doctorSearchResponse").text(result);
+    apiCallKeyword(inputKeyword, apiKey, addToPage);
   });
 });
