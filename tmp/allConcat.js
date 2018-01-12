@@ -12,7 +12,7 @@ function addToPage(doctorInfo){
         <p class="listing">Name: ${doctorInfo.data[i].profile.first_name}  ${doctorInfo.data[i].profile.last_name}<br>
           <a href="${doctorInfo.data[i].profile.image_url}" target="_blank">Website</a><br>Accepts new patients: ${doctorInfo.data[i].practices[0].accepts_new_patients}<br>
           Address: ${doctorInfo.data[i].practices[0].visit_address.street}<br>
-          ${doctorInfo.data[i].practices[0].visit_address.city} OR ${doctorInfo.data[i].practices[0].visit_address.zip}<br>
+          ${doctorInfo.data[i].practices[0].visit_address.city} ${doctorInfo.data[i].practices[0].visit_address.state} ${doctorInfo.data[i].practices[0].visit_address.zip}<br>
           Phone: ${doctorInfo.data[i].practices[0].phones[0].number}
            </p>`);
     }
@@ -29,7 +29,7 @@ function addToPage(illnessSearch){
         <p class="listing">Name: ${illnessSearch.data[i].profile.first_name}  ${illnessSearch.data[i].profile.last_name}<br>
           <a href="${illnessSearch.data[i].profile.image_url}" target="_blank">Website</a><br>Accepts new patients: ${illnessSearch.data[i].practices[0].accepts_new_patients}<br>
           Address: ${illnessSearch.data[i].practices[0].visit_address.street}<br>
-          ${illnessSearch.data[i].practices[0].visit_address.city} OR ${illnessSearch.data[i].practices[0].visit_address.zip}<br>
+          ${illnessSearch.data[i].practices[0].visit_address.city} ${illnessSearch.data[i].practices[0].visit_address.state} ${illnessSearch.data[i].practices[0].visit_address.zip}<br>
           Phone: ${illnessSearch.data[i].practices[0].phones[0].number}
            </p>`);
     }
