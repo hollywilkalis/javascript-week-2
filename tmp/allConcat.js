@@ -12,6 +12,9 @@ function addToPage(doctorInfo){
 }
 
 $(document).ready(function(){
-  let inputName = "Steven";
-  apiCallDoctor(inputName, apiKey);
+  $("form#nameSearch").submit(function(event) {
+    event.preventDefault();
+    let inputName = $("#doctorName").val();
+    apiCallDoctor(inputName, apiKey, addToPage);
+  });
 });
