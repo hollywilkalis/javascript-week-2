@@ -12,6 +12,6 @@ function addToPage(doctorInfo){
 }
 
 $(document).ready(function(){
-  let inputName = "steve";
+  let inputName = "Steven";
   apiCallDoctor(inputName, apiKey);
 });
