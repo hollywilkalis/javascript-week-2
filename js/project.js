@@ -26,6 +26,7 @@ export function apiCallDoctor(inputName, apiKey, addToPage) {
   });
 }
 
+
 // PROMISE API CALL FOR SEARCH BY KEYWORD
 export function apiCallKeyword(inputKeyword, apiKey, addToPage) {
   let promise = new Promise(function(resolve, reject){

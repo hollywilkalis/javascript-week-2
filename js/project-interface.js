@@ -15,6 +15,7 @@ function addToPage(doctorInfo){
           ${doctorInfo.data[i].practices[0].visit_address.city} ${doctorInfo.data[i].practices[0].visit_address.state} ${doctorInfo.data[i].practices[0].visit_address.zip}<br>
           Phone: ${doctorInfo.data[i].practices[0].phones[0].number}
            </p>`);
+      $('#doctorSearchResponse').show();
     }
   }
 }
@@ -36,16 +37,28 @@ function addToPage(illnessSearch){
   }
 }
 
+
+
 $(document).ready(function(){
+  $(".searchagain").hide();
+
   $("form#nameSearch").submit(function(event) {
     event.preventDefault();
     let inputName = $("#doctorName").val();
     apiCallDoctor(inputName, apiKey, addToPage);
+    $(".searchboxes").hide();
+    setTimeout(function() {
+      $(".searchagain").show();
+    }, 4000);
   });
 
   $("form#keywordSearch").submit(function(event) {
     event.preventDefault();
     let inputKeyword = $("#keyword").val();
     apiCallKeyword(inputKeyword, apiKey, addToPage);
+    $(".searchboxes").hide();
+    setTimeout(function() {
+      $(".searchagain").show();
+    }, 4000);
   });
 });
