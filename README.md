@@ -1,10 +1,10 @@
 # Doctor Lookup
 
-#### _{Brief description of application}, {Date of current version}_
+#### This is the project for week 2 of the Epicodus Javascript section, utilizing the BetterDoctor API
 
 #### By Holly Wilkalis
 
-## Description
+## Description/Specifications
 
 * Enter a medical issue to receive a list of doctors in the Portland area that fit the search query.
 * Enter a name to receive a list of doctors in the Portland area that fit the search query.
@@ -14,38 +14,37 @@
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* Open your terminal (or other tool you use to access the command line)
+* Navigate to the location where you want to save the project folder
+* Run command to clone project: $ git clone https://github.com/hollywilkalis/javascript-week-2.git
+* Run command to navigate into new project directory: $ cd javascript-week-2
 
 When cloning the project, run these commands before using:
-$ npm install
-$ bower install
+* $ npm install
+* $ bower install
 
-When ready to get the project running:
-$ gulp build
-$ gulp serve
+You are now ready to rock!
 
-To test:
-$ npm test
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+To view a live version of the project, visit http://hollywilkalis.github.io/javascript-week-2
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+At this time the search tool only returns one entry per provider - if they practice at multiple clinics or locations, this will only show the first entry.
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+I like to talk about this stuff, so drop me a line at holly.wilkalis@gmail.com and we can be nerds together.
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+This project uses:
+* HTML and css
+* Bootstrap
+* A Gulp pipeline
+* npm
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
+*MIT license*
 
-Copyright (c) 2015 **_{List of contributors or company name}_**
+Copyright (c) 2018 **Holly Wilkalis**
